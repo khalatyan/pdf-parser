@@ -1,0 +1,8 @@
+.env/
+.vscode/
+/media
+/static
+*.pyc
+local_settings.py
+.idea
+.DS_Store
