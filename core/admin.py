@@ -3,10 +3,11 @@ from django.contrib import admin
 
 from core.models import Faculty, Direction, Format, Document
 
+
 @admin.register(Faculty)
 class FacultyAdmin(admin.ModelAdmin):
     list_display = [
-        'title'
+        'id', 'title'
     ]
 
 
@@ -16,6 +17,10 @@ class DirectionAdmin(admin.ModelAdmin):
         'title', 'faculty'
     ]
 
+    list_filter = [
+        'faculty',
+    ]
+
 
 @admin.register(Format)
 class FormatAdmin(admin.ModelAdmin):
@@ -23,10 +28,18 @@ class FormatAdmin(admin.ModelAdmin):
         'title', 'direction'
     ]
 
+    list_filter = [
+        'direction__faculty',
+    ]
+
 
 @admin.register(Document)
 class DocumentAdmin(admin.ModelAdmin):
     list_display = [
         'title', 'format'
+    ]
+
+    list_filter = [
+        'format__direction__faculty', 'type'
     ]
 

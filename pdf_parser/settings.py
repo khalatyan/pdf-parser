@@ -126,4 +126,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-from pdf_parser.local_settings import *
+try:
+    from pdf_parser.local_settings import *
+except:
+    pass

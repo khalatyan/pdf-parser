@@ -1,0 +1,49 @@
+{
+  "source": {
+    "type": "file",
+    "location": "my.pdf",
+    "filename": "my.pdf"
+  },
+  "metadata": {
+    "Author": "\u0412\u043b\u0430\u0434\u0430 \u041c\u0430\u043a\u0441\u0438\u043c\u043e\u0432\u0430",
+    "CreationDate": "D:20210605133725+08'00'",
+    "Creator": "Microsoft\u00ae Word 2016",
+    "ModDate": "D:20210605144356+08'00'",
+    "Producer": "Microsoft\u00ae Word 2016",
+    "rdf": {
+      "li": "\u0412\u043b\u0430\u0434\u0430 \u041c\u0430\u043a\u0441\u0438\u043c\u043e\u0432\u0430"
+    },
+    "dc": {
+      "format": "application/pdf",
+      "creator": [
+        "\u0412\u043b\u0430\u0434\u0430 \u041c\u0430\u043a\u0441\u0438\u043c\u043e\u0432\u0430"
+      ]
+    },
+    "xap": {
+      "CreateDate": "2021-06-05T13:37:25+08:00",
+      "CreatorTool": "Microsoft\u00ae Word 2016",
+      "ModifyDate": "2021-06-05T14:43:56+08:00",
+      "MetadataDate": "2021-06-05T14:43:56+08:00"
+    },
+    "pdf": {
+      "Producer": "Microsoft\u00ae Word 2016"
+    },
+    "xapmm": {
+      "DocumentID": "uuid:afbcd135-3e5e-4e52-a22b-1caffedb79a5",
+      "InstanceID": "uuid:df640617-b741-4ab5-860f-064b8f3cbdfe"
+    },
+    "Pages": 18
+  },
+  "references": {
+    "url": [
+      "http://library.isu.ru",
+      "https://urait.ru/bcode/444432",
+      "https://urait.ru",
+      "https://edu.buk.irk.ru",
+      "http://isu.ru/ru/about/programs",
+      "https://urait.ru/",
+      "https://edu.buk.irk.ru/",
+      "http://library.isu.ru/"
+    ]
+  }
+}

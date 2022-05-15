@@ -9,6 +9,12 @@ from django.db import models
 
 from bs4 import BeautifulSoup, Tag
 
+DOC_TYPE = [
+    (0, 'Учебный план'),
+    (1, 'Рабочая программа'),
+]
+
+
 class Faculty(models.Model):
     """
     Факультет
@@ -44,7 +50,7 @@ class Direction(models.Model):
     )
 
     def __str__(self):
-        return f'{self.faculty}, {self.title}'
+        return f'{self.title}'
 
     class Meta:
         verbose_name = "направление"
@@ -74,11 +80,24 @@ class Format(models.Model):
     )
 
     def __str__(self):
-        return f'{self.direction}, {self.title}'
+        return f'{self.direction.title}, {self.title}'
 
     class Meta:
         verbose_name = "формат"
         verbose_name_plural = "Форматы обучения"
+
+
+class DocumentType(models.Model):
+    """
+    Тип документа
+    """
+    title = models.CharField(
+        verbose_name='Название',
+        max_length=255
+    )
+
+    def __str__(self):
+        return f'{self.title}'
 
 
 class Document(models.Model):
@@ -102,12 +121,20 @@ class Document(models.Model):
         max_length = 20000
     )
 
+    type = models.ForeignKey(
+        DocumentType,
+        verbose_name="Тип программы",
+        null=True,
+        on_delete=models.SET_NULL
+    )
+
     def __str__(self):
         return f'{self.title}'
 
     class Meta:
         verbose_name = "документ"
         verbose_name_plural = "Документы"
+
 
 
 
